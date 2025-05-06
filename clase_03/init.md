@@ -27,7 +27,7 @@ mi-proyecto-api/
 {
   "compilerOptions": {
     "target": "es2016", // Versión de ECMAScript de destino.
-    "module": "CommonJS", // Sistema de módulos a usar. CommonJS es estándar para Node.js.
+    "module": "commonJS", // Sistema de módulos a usar. CommonJS es estándar para Node.js.
     "outDir": "./dist", // Directorio de salida para los archivos JavaScript compilados.
     "rootDir": "./src", // Directorio raíz de tus archivos TypeScript.
     "strict": true, // Habilita todas las opciones de verificación de tipo estrictas.
