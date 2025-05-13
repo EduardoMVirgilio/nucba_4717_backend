@@ -7,3 +7,9 @@
 // Herencia en Interfaces
 
 // Herencia en Clases
+
+// Records
+
+// Pick
+
+// Omit
