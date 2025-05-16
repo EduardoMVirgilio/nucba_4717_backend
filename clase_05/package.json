@@ -1,0 +1,16 @@
+{
+  "name": "clase_05",
+  "version": "1.0.0",
+  "main": "file.js",
+  "type": "module",
+  "scripts": {
+    "start": "node cli/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@inquirer/prompts": "^7.5.1"
+  }
+}
