@@ -16,7 +16,8 @@ const StudentSchema = new mongoose.Schema({
     unique: true,
   },
   curso: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Course",
     required: true,
   },
   activo: {
