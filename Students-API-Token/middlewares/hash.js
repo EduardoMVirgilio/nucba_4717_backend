@@ -1,10 +1,13 @@
-const hash = (req, res, next) => {
+// import bcrypt from "bcryptjs";
+import argon2 from "argon2";
+const hash = async (req, res, next) => {
   try {
     const { password } = req.body;
-    if (!password) {
-      return res.status(400).json({ message: "Password is required" });
-    }
     // TODO: hash password
+    if (password) {
+      const hashPassword = await argon2.hash(password);
+      req.body.password = hashPassword;
+    }
     next();
   } catch (error) {
     res.status(500).json({ message: error.message });

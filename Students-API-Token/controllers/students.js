@@ -60,6 +60,7 @@ export const createStudent = async (req, res) => {
       dni,
       nombre: req.body.nombre,
       email: req.body.email,
+      password: req.body.password,
       curso: courseExists?._id,
     });
     res.status(201).json(student);

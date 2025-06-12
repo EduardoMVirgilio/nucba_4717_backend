@@ -15,6 +15,10 @@ const StudentSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+  password: {
+    type: String,
+    required: true,
+  },
   curso: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Course",
