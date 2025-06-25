@@ -13,4 +13,7 @@ app.use(connect);
 import auth from "./routes/auth.js";
 app.use("/auth", auth);
 
-app.listen(PORT);
+import orders from "./routes/orders.js";
+app.use("/orders", orders);
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
