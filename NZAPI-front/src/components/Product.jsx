@@ -6,10 +6,10 @@ import { formatPrice } from "../utils/format.js";
 const Product = ({ product }) => {
   const { items, setItems } = useCart();
   const navigate = useNavigate();
-  const { profile } = useUser();
+  const { token } = useUser();
 
   const addToCart = () => {
-    if (!profile) {
+    if (!token) {
       navigate("/login");
       return;
     }
@@ -42,7 +42,7 @@ const Product = ({ product }) => {
         <dt>{product.title}</dt>
         <dd>{formatPrice(product.price)}</dd>
       </dl>
-      {profile ? (
+      {token ? (
         <button type="button" onClick={addToCart}>
           Agregar al carrito
         </button>

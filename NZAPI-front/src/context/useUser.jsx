@@ -14,10 +14,11 @@ export const UserProvider = ({ children }) => {
   }, []);
   useEffect(() => {
     if (!token) return;
-    const loadProfile = async () => {};
-    const loadOrders = async () => {};
-    loadProfile();
-    loadOrders();
+    localStorage.setItem("token", token);
+    // const loadProfile = async () => {};
+    // const loadOrders = async () => {};
+    // loadProfile();
+    // loadOrders();
   }, [token]);
   return (
     <User.Provider value={{ profile, token, setToken, orders, setOrders }}>

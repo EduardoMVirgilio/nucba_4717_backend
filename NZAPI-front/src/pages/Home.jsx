@@ -3,11 +3,11 @@ import Cart from "../components/Cart.jsx";
 import useUser from "../context/useUser.jsx";
 
 const Home = () => {
-  const { profile } = useUser();
+  const { token } = useUser();
   return (
     <>
       <Products />
-      <Cart />
+      {token && <Cart />}
     </>
   );
 };

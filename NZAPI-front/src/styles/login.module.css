@@ -32,6 +32,9 @@
         box-shadow: 0 0 0 0.25rem rgba(160, 320, 520, 0.5);
       }
     }
+    & p {
+      color: rgb(248, 72, 72);
+    }
   }
   & button {
     cursor: pointer;

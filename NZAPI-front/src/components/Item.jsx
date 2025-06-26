@@ -5,25 +5,27 @@ import useCart from "../context/useCart.jsx";
 const Item = ({ item }) => {
   const { items, setItems } = useCart();
   const addQuantity = () => {
-    if (items.find((item) => item.id === item.id)) {
+    if (items.find((curItem) => curItem.id === item.id)) {
       setItems(
-        items.map((item) =>
-          item.id === item.id ? { ...item, quantity: item.quantity + 1 } : item
+        items.map((curItem) =>
+          curItem.id === item.id
+            ? { ...curItem, quantity: curItem.quantity + 1 }
+            : curItem
         )
       );
       return;
     }
   };
   const removeQuantity = () => {
-    if (items.find((item) => item.id === item.id)) {
+    if (items.find((curItem) => curItem.id === item.id)) {
       setItems(
         items
-          .map((item) =>
-            item.id === item.id
-              ? { ...item, quantity: item.quantity - 1 }
-              : item
+          .map((curItem) =>
+            curItem.id === item.id
+              ? { ...curItem, quantity: curItem.quantity - 1 }
+              : curItem
           )
-          .filter((item) => item.quantity > 0)
+          .filter((curItem) => curItem.quantity > 0)
       );
       return;
     }
