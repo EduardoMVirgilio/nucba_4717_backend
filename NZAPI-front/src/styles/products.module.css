@@ -1,0 +1,125 @@
+#products {
+  background-color: rgba(160, 320, 520, 0.3);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+#products ul {
+  display: flex;
+  list-style: none;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1rem;
+}
+
+#products ul li {
+  background-color: rgba(160, 320, 520, 1);
+  width: calc(100% / 4 - 1rem);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.25rem;
+}
+#products ul li picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  aspect-ratio: 1/1;
+  & img {
+    object-fit: contain;
+  }
+}
+
+#products ul li dl {
+  padding: 1rem;
+  & dt {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  & dd {
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+#products ul li button {
+  cursor: pointer;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  border: none;
+  outline: none;
+  transform: scale(0.9);
+  transition: transform 0.25s ease-in-out;
+  background-color: var(--background);
+  color: var(--primary);
+  font-family: var(--font-cas);
+  &:hover {
+    transform: scale(1);
+  }
+  & svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+#products > form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  & button {
+    cursor: pointer;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(160, 320, 520, 0.3);
+    transition: box-shadow 0.25s ease-in-out;
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba(160, 320, 520, 0.5);
+    }
+    &:hover {
+      box-shadow: 0 0 0 0.25rem rgba(160, 320, 520, 0.5);
+    }
+    & svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      box-shadow: none;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+  & output {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary);
+    font-family: var(--font-cas);
+  }
+}

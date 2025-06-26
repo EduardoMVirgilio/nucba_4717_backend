@@ -1,0 +1,51 @@
+#login {
+  background-color: rgba(160, 320, 520, 0.3);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  & fieldset {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    & legend {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: var(--font-cas);
+      color: var(--primary);
+    }
+    & input {
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.25rem;
+      border: none;
+      outline: none;
+      box-shadow: 0 0 0 0.25rem rgba(160, 320, 520, 0.3);
+      transition: box-shadow 0.25s ease-in-out;
+      &:focus {
+        box-shadow: 0 0 0 0.25rem rgba(160, 320, 520, 0.5);
+      }
+    }
+  }
+  & button {
+    cursor: pointer;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(160, 320, 520, 0.3);
+    transition: box-shadow 0.25s ease-in-out;
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba(160, 320, 520, 0.5);
+    }
+    &:hover {
+      box-shadow: 0 0 0 0.25rem rgba(160, 320, 520, 0.5);
+    }
+  }
+}
