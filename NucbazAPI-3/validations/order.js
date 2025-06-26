@@ -1,6 +1,6 @@
 import { body } from "express-validator";
 
-export const orderValidation = [
+const orderValidation = [
   body("items")
     .isArray({ min: 1 })
     .withMessage("Items must be an array")
@@ -47,3 +47,5 @@ export const orderValidation = [
       return true;
     }),
 ];
+
+export default orderValidation;
